@@ -69,45 +69,45 @@ function generateFile (img, email, answers) {
     }
 
     const contents = `
-    ![profile Avatar](${img})
+    Format: ![Profile Avatar](${img})
 
-    ###${username}  ![GitHub Follower](https://img.shields.io/github/followers/${username}?label=Follower&style=social)
+    ### ${username}  Format: ![GitHub Follower](https://img.shields.io/github/followers/${username}?label=Follower&style=social)
 
-    ####Email Address: ${email}
+    #### Email Address: ${email}
 
     ----------------------------------------------------------------------------------------------------------------------
 
-    #${title}
+    # ${title}
 
-    ##Project Desscription:
+    ## Project Desscription:
 
     ${description}
 
-    ##Table of Contents:
+    ## Table of Contents:
 
     ${table}
 
-    ##Installation:
+    ## Installation:
 
     ${installation}
 
-    ##Usage:
+    ## Usage:
 
     ${usage}
 
-    ##License:
+    ## License:
 
     ${license}
 
-    ##Contributing:
+    ## Contributing:
 
     ${contribute}
 
-    ##Test:
+    ## Test:
 
     ${tests}
 
-    ##Question:
+    ## Question:
 
     ${questions}
     `

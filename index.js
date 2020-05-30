@@ -76,8 +76,6 @@ function generateFile (img, email, answers) {
 
     #### Email Address: ${email}
 
-    ----------------------------------------------------------------------------------------------------------------------
-
     # ${title}
 
     ## Project Desscription:
@@ -113,7 +111,10 @@ function generateFile (img, email, answers) {
     ${questions}
     `
 
-    fs.writeFile('README.md', contents , err => {
+    const rmContent = contents + '\n';
+    console.log(typeof contents);
+    
+    fs.writeFile('README.md', rmContent , err => {
         if (err) {
             return console.error(err);
         }

@@ -2,6 +2,7 @@ const fs = require('fs');
 const axios = require('axios');
 const inquirer = require('inquirer');
 
+//Prompt the user to enter github username and answer question for README section
 inquirer
     .prompt([
     {
@@ -51,17 +52,19 @@ inquirer
     })
 
 
-    
+// Call the API and create the README file    
 function getApiData (url, answers) {
     axios
         .get(url)
         .then( response => {
             const userEmail = response.data.email;
             const userProfileImg = response.data.avatar_url;
+            // console.log(userEmail);
             generateFile(userProfileImg, userEmail, answers);
         });
 }
 
+//Construct README file
 function generateFile (img, email, answers) {
     const {username, title, description, table, installation, usage, license, contribute, tests, questions} = answers;
     if (email === null) {

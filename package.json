@@ -1,0 +1,24 @@
+{
+  "name": "good-readme-generator",
+  "version": "1.0.0",
+  "description": "Create a command-line application that dynamically generates a README.md from a user's input.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaime-Huynh0901/Good-README-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaime-Huynh0901/Good-README-generator/issues"
+  },
+  "homepage": "https://github.com/Jaime-Huynh0901/Good-README-generator#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "inquirer": "^7.1.0"
+  }
+}

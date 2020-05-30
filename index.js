@@ -69,6 +69,7 @@ function generateFile (img, email, answers) {
     }
 
     const contents = `
+
     ![Profile Avatar](${img})
 
     ### ${username}  ![GitHub Follower](https://img.shields.io/github/followers/${username}?label=Follower&style=social)

@@ -70,51 +70,48 @@ function generateFile (img, email, answers) {
 
     const contents = `
 
-    ![Profile Avatar](${img})
+![Profile Avatar](${img})
 
-    ### ${username}  ![GitHub Follower](https://img.shields.io/github/followers/${username}?label=Follower&style=social)
+### ${username}  ![GitHub Follower](https://img.shields.io/github/followers/${username}?label=Follower&style=social)
 
-    #### Email Address: ${email}
+#### Email Address: ${email}
 
-    # ${title}
+# ${title}
 
-    ## Project Desscription:
+## Project Desscription:
 
-    ${description}
+${description}
 
-    ## Table of Contents:
+## Table of Contents:
 
-    ${table}
+${table}
 
-    ## Installation:
+## Installation:
 
-    ${installation}
+${installation}
 
-    ## Usage:
+## Usage:
 
-    ${usage}
+${usage}
 
-    ## License:
+## License:
 
-    ${license}
+${license}
 
-    ## Contributing:
+## Contributing:
 
-    ${contribute}
+${contribute}
 
-    ## Test:
+## Test:
 
-    ${tests}
+${tests}
 
-    ## Question:
+## Question:
 
-    ${questions}
-    `
-
-    const rmContent = contents + '\n';
-    console.log(typeof contents);
+${questions}
+`
     
-    fs.writeFile('README.md', rmContent , err => {
+    fs.writeFile('README.md', contents , err => {
         if (err) {
             return console.error(err);
         }

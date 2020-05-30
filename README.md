@@ -6,37 +6,36 @@
 
 #### Email Address: Jaime-Huynh0901@gmail.com
 
-# fldskjfkds
+# Good README Generator
 
 ## Project Desscription:
 
-fdsjklfjdslkf
+Create a command-line application that dynamically generates a README.md from a user's input
 
 ## Table of Contents:
 
-jdlfjdslkf
+N/A
 
 ## Installation:
 
-fjdkslfjlsdk
+install the dependency using: `npm install`
 
 ## Usage:
 
-fjdalkfjdslk
+cd to the directory of the folders and run `node index.js`
 
 ## License:
 
-fjdalfjlds
+MIT
 
 ## Contributing:
 
-fjdlkfjdslk
+Tai Huynh
 
 ## Test:
 
-fjdaklfjdlsk
+QA passed
 
 ## Question:
 
-fjdlkfjlsd
-    
+Please send it to my email

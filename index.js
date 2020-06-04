@@ -64,7 +64,6 @@ function getApiData (url, answers) {
         .get(url)
         .then( response => {
             const userProfileUrl = response.data.html_url;
-            console.log(response.data);
             generateFile(userProfileUrl, answers);
         });
 }
@@ -86,17 +85,17 @@ ${description}
 
 ## Table of Contents:
 
-*[Installation](#Installation%20Instruction)
+* [Installation](#Installation%20Instruction)
 
-*[Usage](#Usage)
+* [Usage](#Usage)
 
-*[License](#License)
+* [License](#License)
 
-*[Contributing](#Contributing)
+* [Contributing](#Contributing)
 
-*[Test Instruction](#Test%20Instruction)
+* [Test Instruction](#Test%20Instruction)
 
-*[Question](#Question)
+* [Question](#Question)
 
 
 ## Installation Instruction:
@@ -123,8 +122,8 @@ ${tests}
 
 if you have any question, Feel free to reach out to me at:
 
-##### ${username}  ![GitHub Follower](https://img.shields.io/github/followers/${username}?label=Follower&style=social)
-##### ${profileUrl}
+##### Git UserName: ${username}  ![GitHub Follower](https://img.shields.io/github/followers/${username}?label=Follower&style=social)
+##### Git profile: ${profileUrl}
 ##### Email Address: ${email}
 `
     

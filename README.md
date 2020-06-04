@@ -63,7 +63,7 @@ Jaime-Huynh0901
         - THEN I am taken to the corresponding section of the README
 
 * [Video Demo Link](https://drive.google.com/file/d/1x3QDfczq6nuzC-en7stzaYjDKfMzVi-E/view)
-* ![Command Line Screenshot](Screenshot1.png)
+* ![Command Line Screenshot](Sreenshot1.png)
 
 ## Question:
 

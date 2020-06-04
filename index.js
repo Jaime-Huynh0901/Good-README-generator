@@ -18,33 +18,36 @@ inquirer
         name: 'description'
     },
     {
-        message: 'Enter your project Table of Contents',
-        name: 'table'
+        message: 'Enter your Email',
+        name: 'email'
     },
     {
-        message: 'Enter your project Installation',
+        message: 'Enter your project Installation Instruction',
         name: 'installation'
     },
     {
-        message: 'Enter your project Usage',
+        message: 'Enter your project Usage Instruction',
         name: 'usage'
     },
     {
-        message: 'Enter your project License',
-        name: 'license'
+        type: 'checkbox',
+        message: 'Choose your license type',
+        name: 'license',
+        choices: [
+          'MIT License', 
+          'Apache License', 
+          'The GPL License'
+        ]
     },
     {
         message: 'Enter your project Contributing',
         name: 'contribute'
     },
     {
-        message: 'Enter your project Tests',
+        message: 'Enter your project Tests Instruction',
         name: 'tests'
-    },
-    {
-        message: 'Enter your project Questions',
-        name: 'questions'
     }
+  
     ])
     .then( (answers) => {
         const queryURL = `https://api.github.com/users/${answers.username}?per_page=100`;
@@ -57,29 +60,22 @@ function getApiData (url, answers) {
     axios
         .get(url)
         .then( response => {
-            const userEmail = response.data.email;
-            const userProfileImg = response.data.avatar_url;
-            // console.log(userEmail);
-            generateFile(userProfileImg, userEmail, answers);
+            const userProfileUrl = response.data.html_url;
+            console.log(response.data);
+            generateFile(userProfileUrl, answers);
         });
 }
 
 //Construct README file
-function generateFile (img, email, answers) {
-    const {username, title, description, table, installation, usage, license, contribute, tests, questions} = answers;
-    if (email === null) {
-        email = `${username}@gmail.com`;
-    }
+function generateFile (profileUrl, answers) {
+    const {username, title, description, email, installation, usage, license, contribute, tests} = answers;
 
+    
+  
     const contents = `
 
-![Profile Avatar](${img})
 
-### ${username}  ![GitHub Follower](https://img.shields.io/github/followers/${username}?label=Follower&style=social)
-
-#### Email Address: ${email}
-
-# ${title}
+# ${title}                                              ![Project license](https://img.shields.io/badge/license-${license}-brightgreen)                                                       
 
 ## Project Desscription:
 
@@ -87,9 +83,20 @@ ${description}
 
 ## Table of Contents:
 
-${table}
+*[Installation](#Installation%20Instruction)
 
-## Installation:
+*[Usage](#Usage)
+
+*[License](#License)
+
+*[Contributing](#Contributing)
+
+*[Test Instruction](#Test%20Instruction)
+
+*[Question](#Question)
+
+
+## Installation Instruction:
 
 ${installation}
 
@@ -105,13 +112,17 @@ ${license}
 
 ${contribute}
 
-## Test:
+## Test Instruction:
 
 ${tests}
 
 ## Question:
 
-${questions}
+if you have any question, Feel free to reach out to me at:
+
+##### ${username}  ![GitHub Follower](https://img.shields.io/github/followers/${username}?label=Follower&style=social)
+##### ${profileUrl}
+##### Email Address: ${email}
 `
     
     fs.writeFile('README.md', contents , err => {

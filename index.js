@@ -22,10 +22,12 @@ inquirer
         name: 'email'
     },
     {
+        type: 'editor',
         message: 'Enter your project Installation Instruction',
         name: 'installation'
     },
     {
+        type: 'editor',
         message: 'Enter your project Usage Instruction',
         name: 'usage'
     },
@@ -34,9 +36,9 @@ inquirer
         message: 'Choose your license type',
         name: 'license',
         choices: [
-          'MIT License', 
-          'Apache License', 
-          'The GPL License'
+          'MIT', 
+          'Apache', 
+          'GPL'
         ]
     },
     {
@@ -44,6 +46,7 @@ inquirer
         name: 'contribute'
     },
     {
+        type: 'editor',
         message: 'Enter your project Tests Instruction',
         name: 'tests'
     }
@@ -75,7 +78,7 @@ function generateFile (profileUrl, answers) {
     const contents = `
 
 
-# ${title}                                              ![Project license](https://img.shields.io/badge/license-${license}-brightgreen)                                                       
+# ${title}                                              ![Project license](https://img.shields.io/badge/license-${answers.license}-brightgreen)                                                       
 
 ## Project Desscription:
 

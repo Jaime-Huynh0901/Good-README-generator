@@ -1,7 +1,7 @@
 
 
 
-# Good README Generator                                              ![Project license](https://img.shields.io/badge/license--brightgreen)                                                       
+# Good README Generator                                              ![Project license](https://img.shields.io/badge/license-MIT-brightgreen)                                                       
 
 ## Project Desscription:
 
@@ -24,15 +24,19 @@ Create a command-line application that dynamically generates a README.md from a 
 
 ## Installation Instruction:
 
-*git clone the repo to your local machine. *install the dependency using: `npm install -s`
+1. git clone the repo to your local machine. 
+2. install the dependency using: `npm install -s`
+
 
 ## Usage:
 
-*cd to the directory of the application folder. *run `node index.js`. *Enter the prompted question(command line).
+1. cd to the directory of the application folder. *run `node index.js` 
+2. Enter the prompted question(command line).
+
 
 ## License:
 
-
+MIT
 
 ## Contributing:
 
@@ -55,6 +59,7 @@ WHEN I enter my email address
 THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
+
 
 ## Question:
 

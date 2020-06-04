@@ -9,7 +9,7 @@ Create a coammnd-line application that dynamically generates a README.md from a 
 
 ## Table of Contents:
 
-* [Installation](#Installation%20Instruction)
+* [Installation](#Installation-Instruction)
 
 * [Usage](#Usage)
 
@@ -17,7 +17,7 @@ Create a coammnd-line application that dynamically generates a README.md from a 
 
 * [Contributing](#Contributing)
 
-* [Test Instruction](#Test%20Instruction)
+* [Test Instruction](#Test-Instruction)
 
 * [Question](#Question)
 
@@ -63,7 +63,7 @@ Jaime-Huynh0901
         - THEN I am taken to the corresponding section of the README
 
 * [Video Demo Link](https://drive.google.com/file/d/1x3QDfczq6nuzC-en7stzaYjDKfMzVi-E/view)
-* ![Command Line Screenshot](assets/Screenshot1.png)
+![Command Line Screenshot](assets/Screenshot1.png)
 
 ## Question:
 

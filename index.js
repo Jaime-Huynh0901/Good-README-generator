@@ -85,7 +85,7 @@ ${description}
 
 ## Table of Contents:
 
-* [Installation](#Installation%20Instruction)
+* [Installation](#Installation-Instruction)
 
 * [Usage](#Usage)
 
@@ -93,7 +93,7 @@ ${description}
 
 * [Contributing](#Contributing)
 
-* [Test Instruction](#Test%20Instruction)
+* [Test Instruction](#Test-Instruction)
 
 * [Question](#Question)
 
